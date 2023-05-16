@@ -33,5 +33,9 @@ module V3BasicRailsBasic
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.generators.helper = false
+    config.generators.test_framework = false
+    config.generators.skip_routes = true
   end
 end
