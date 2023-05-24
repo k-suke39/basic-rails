@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-auto">
+      <h1>ログイン</h1>
+      <!-- ここからform_withを使う形に修正してください -->
+      <%= form_with url: '#' do |f|%>
+
+        <div class="mb-3">
+          <%= f.label :user_email, 'Email', class: 'form-label'%>
+          <%= f.text_field :Email,  class: 'form-control', id: "user_email"%>
+        </div>
+        <div class="mb-3">
+          <%= f.label :user_password, 'Password', class: 'form-label'%>
+          <%= f.password_field :password,  class: 'form-control', id: "user_password"%>
+        </div>
+        <%= f.submit 'ログイン',  class: 'btn btn-primary'%>
+      <% end %>
+      <!-- ここまでform_withを使う形に修正してください -->
+      <div class='text-center'>
+        <a href="#">登録ページへ</a>
+        <a href="#">パスワードをお忘れの方はこちら</a>
+      </div>
+    </div>
+  </div>
+</div>
