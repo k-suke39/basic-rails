@@ -14,12 +14,12 @@
       <ul class='navbar-nav ms-auto main-nav align-items-center'>
         <li class='nav-item dropdown dropdown-slide'>
           <!-- link_toを使う形に修正してください -->
-          <%= link_to '掲示板', '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }%>
+          <%= link_to t('header.board'), '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }%>
           <div class='dropdown-menu dropdown-menu-end'>
             <!-- link_toを使う形に修正してください -->
-            <%= link_to '掲示板一覧', '#', class: 'dropdown-item'%>
+            <%= link_to t('header.board_index'), '#', class: 'dropdown-item'%>
             <!-- link_toを使う形に修正してください -->
-            <%= link_to '掲示板作成', '#', class: 'dropdown-item'%>
+            <%= link_to t('header.create_board'), '#', class: 'dropdown-item'%>
           </div>
         </li>
 
@@ -41,9 +41,9 @@
             <div class='dropdown-item'>らんてっく たろう</div>
             <div class='dropdown-divider'></div>
             <!-- link_toを使う形に修正してください -->
-            <%= link_to 'プロフィール', '#', class: 'dropdown-item'%>
+            <%= link_to t('header.profile'), '#', class: 'dropdown-item'%>
             <!-- link_toを使う形に修正してください -->
-            <%= link_to 'ログアウト', logout_path,data: { turbo_method: :delete }, class: 'dropdown-item'%>
+            <%= link_to t('header.logout'), logout_path,data: { turbo_method: :delete }, class: 'dropdown-item'%>
           </div>
         </li>
       </ul>

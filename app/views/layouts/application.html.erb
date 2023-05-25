@@ -12,11 +12,11 @@
 
   <body>
     <% if logged_in? %>
-      <%= render 'layouts/header' %>
+      <%= render 'shared/header' %>
     <% else %>
       <%= render 'shared/before_login_header' %>
     <% end %>
     <%= yield %>
-    <%= render "/layouts/footer"%>
+    <%= render "shared/footer"%>
   </body>
 </html>

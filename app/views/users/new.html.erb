@@ -1,34 +1,34 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-lg-8 mx-auto">
-      <h1>ユーザー登録</h1>
+      <h1><%= t('.title') %></h1>
       <!-- ここからform_withを使う形に修正してください -->
       <%=form_with model: @user do |f| %>
         <div class="mb-3">
-          <%= f.label :last_name, 'Last name', class: 'form-label'%>
+          <%= f.label :last_name, class: 'form-label'%>
           <%= f.text_field :last_name,  class: 'form-control', id: "user_last_name"%>
         </div>
         <div class="mb-3">
-          <%= f.label :first_name, 'First name', class: 'form-label'%>
+          <%= f.label :first_name, class: 'form-label'%>
           <%= f.text_field :first_name,  class: 'form-control', id: "user_first_name"%>
         </div>
         <div class="mb-3">
-          <%= f.label :email, 'Email', class: 'form-label'%>
+          <%= f.label :email, class: 'form-label'%>
           <%= f.text_field :email,  class: 'form-control', id: "user_email"%>
         </div>
         <div class="mb-3">
-          <%= f.label :password, 'Password', class: 'form-label'%>
+          <%= f.label :password, class: 'form-label'%>
           <%= f.password_field :password,  class: 'form-control', id: "user_password"%>
         </div>
         <div class="mb-3">
-          <%= f.label :password_confirmation, 'Password confirmation', class: 'form-label'%>
+          <%= f.label :password_confirmation, class: 'form-label'%>
           <%= f.password_field :password_confirmation,  class: 'form-control', id: "user_password_confirmation"%>
         </div>
         <%= f.submit '登録',  class: 'btn btn-primary'%>
       <% end %>
       <!-- ここまでform_withを使う形に修正してください -->
       <div class='text-center'>
-        <a href="<%= login_path %>">ログインページへ</a>
+        <%= link_to t('.to_login_page'), login_path %>
       </div>
     </div>
   </div>
