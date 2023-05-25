@@ -9,7 +9,7 @@ class UserDecorator < ApplicationDecorator
   #       object.created_at.strftime("%a %m/%d/%y")
   #     end
   #   end
-	def full_name
-		"#{object.last_name} #{object.first_name}"
-	end
+  def full_name
+    "#{object.last_name} #{object.first_name}"
+  end
 end
