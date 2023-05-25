@@ -38,7 +38,7 @@
          
           <% end %>
           <div class='dropdown-menu dropdown-menu-end'>
-            <div class='dropdown-item'>らんてっく たろう</div>
+            <div class='dropdown-item'><%= current_user.decorate.full_name %></div>
             <div class='dropdown-divider'></div>
             <!-- link_toを使う形に修正してください -->
             <%= link_to t('header.profile'), '#', class: 'dropdown-item'%>
