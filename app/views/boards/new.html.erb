@@ -1,19 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <h1>掲示板作成</h1>
+      <h1><%= t('header.create_board')%></h1>
       <!-- ここからform_withを使う形に修正してください -->
-      <form class="new_board">
+      <%= form_with model: @board, class: 'new_board' do |f| %>
         <div class="mb-3">
-          <label for="board_title">タイトル</label>
-          <input class="form-control" type="text" name="board[title]" id="board_title" />
+          <%= f.label :title%>
+          <%= f.text_field :title, class: 'form-control'%>
         </div>
         <div class="mb-3">
-          <label for="board_body">本文</label>
-          <textarea class="form-control" row="10" style="height: 200px" name="board[body]" id="board_body"></textarea>
+          <%= f.label :body%>
+          <%= f.text_area :body, class: 'form-control', class: 'form-control', style: 'height: 200px', row: '10'%>
         </div>
-        <input type="submit" name="commit" value="作成" class="btn btn-primary" data-disable-with="作成" />
-      </form>
+        <%= f.submit '登録', class: 'btn btn-primary'%>
+      <% end %>
       <!-- ここまでform_withを使う形に修正してください -->
     </div>
   </div>

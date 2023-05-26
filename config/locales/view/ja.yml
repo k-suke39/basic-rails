@@ -34,3 +34,6 @@ ja:
   boards:
     index:
       no_result: 掲示板がありません
+    create:
+      successful: 掲示板を作成しました
+      failure: 掲示板を作成出来ませんでした
