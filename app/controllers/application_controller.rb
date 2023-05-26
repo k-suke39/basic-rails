@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     if logged_in?
       true
     else
-      flash[:danger] = "#{user_sessions.new.title}してください"
+      flash[:danger] = "#{t.(user_sessions.new.title)}してください"
       redirect_to login_path
     end
   end
