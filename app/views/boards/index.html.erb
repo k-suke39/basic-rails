@@ -10,150 +10,15 @@
     </div>
   </div>
   <!-- 掲示板一覧 -->
+  <% if @boards.present?%>
   <div class="row">
     <div class="col-12">
       <div class="row">
-        <div class="col-sm-12 col-lg-4 mb-3">
-          <div id="board-id-1">
-            <!-- image_tagを使う形に修正してください -->
-            <div class="card"><img class="card-img-top" src="/assets/board_placeholder.png" width="300" height="200"/>
-              <div class="card-body">
-                <div class="d-flex">
-                  <h4 class="card-title">
-                    <!-- link_toを使う形に修正してください -->
-                    <a href="#">タイトル0</a>
-                  </h4>
-                  <div class="ms-auto">
-                    <%= link_to "#", id: "button-edit-0" do %>
-                      <i class="bi bi-pencil-fill"></i>
-                    <% end %>
-                    <%= link_to "#", id: "button-delete-0", method: :delete, data: {confirm: ""} do %>
-                      <i class="bi bi-trash-fill"></i>
-                    <% end %>
-                  </div>
-                </div>
-                <ul class="list-inline">
-                  <li><i class="bi bi-person"></i> 原田 優衣</li>
-                  <li><i class="bi bi-calendar"></i> 2019/12/26 17:00</li>
-                </ul>
-                <p class="card-text">本文0</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-4 mb-3">
-          <div id="board-id-2">
-            <!-- image_tagを使う形に修正してください -->
-            <div class="card"><img class="card-img-top" src="/assets/board_placeholder.png" width="300" height="200"/>
-              <div class="card-body">
-                <div class="d-flex">
-                  <h4 class="card-title">
-                    <!-- link_toを使う形に修正してください -->
-                    <a href="#">タイトル1</a>
-                  </h4>
-                  <div class="ms-auto">
-                    <%= link_to "#", id: "button-edit-1" do %>
-                      <i class="bi bi-pencil-fill"></i>
-                    <% end %>
-                    <%= link_to "#", id: "button-delete-1", method: :delete, data: {confirm: ""} do %>
-                      <i class="bi bi-trash-fill"></i>
-                    <% end %>
-                  </div>
-                </div>
-                <ul class="list-inline">
-                  <li><i class="bi bi-person"></i> 吉田 優</li>
-                  <li><i class="bi bi-calendar"></i> 2019/12/26 17:00</li>
-                </ul>
-                <p class="card-text">本文1</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-4 mb-3">
-          <div id="board-id-3">
-            <!-- image_tagを使う形に修正してください -->
-            <div class="card"><img class="card-img-top" src="/assets/board_placeholder.png" width="300" height="200"/>
-              <div class="card-body">
-                <div class="d-flex">
-                  <h4 class="card-title">
-                    <!-- link_toを使う形に修正してください -->
-                    <a href="#">タイトル2</a>
-                  </h4>
-                  <div class="ms-auto">
-                    <%= link_to "#", id: "button-edit-2" do %>
-                      <i class="bi bi-pencil-fill"></i>
-                    <% end %>
-                    <%= link_to "#", id: "button-delete-2", method: :delete, data: {confirm: ""} do %>
-                      <i class="bi bi-trash-fill"></i>
-                    <% end %>
-                  </div>
-                </div>
-                <ul class="list-inline">
-                  <li><i class="bi bi-person"></i> 橋本 愛子</li>
-                  <li><i class="bi bi-calendar"></i></i> 2019/12/26 17:00</li>
-                </ul>
-                <p class="card-text">本文2</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-4 mb-3">
-          <div id="board-id-4">
-            <!-- image_tagを使う形に修正してください -->
-            <div class="card"><img class="card-img-top" src="/assets/board_placeholder.png" width="300" height="200"/>
-              <div class="card-body">
-                <div class="d-flex">
-                  <h4 class="card-title">
-                    <!-- link_toを使う形に修正してください -->
-                    <a href="#">タイトル3</a>
-                  </h4>
-                  <div class="ms-auto">
-                    <%= link_to "#", id: "button-edit-3" do %>
-                      <i class="bi bi-pencil-fill"></i>
-                    <% end %>
-                    <%= link_to "#", id: "button-delete-3", method: :delete, data: {confirm: ""} do %>
-                      <i class="bi bi-trash-fill"></i>
-                    <% end %>
-                  </div>
-                </div>
-                <ul class="list-inline">
-                  <li><i class="bi bi-person"></i> 上野 響</li>
-                  <li><i class="bi bi-calendar"></i> 2019/12/26 17:00</li>
-                </ul>
-                <p class="card-text">本文3</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-lg-4 mb-3">
-          <div id="board-id-5">
-            <!-- image_tagを使う形に修正してください -->
-            <div class="card"><img class="card-img-top" src="/assets/board_placeholder.png" width="300" height="200"/>
-              <div class="card-body">
-                <div class="d-flex">
-                  <h4 class="card-title">
-                    <!-- link_toを使う形に修正してください -->
-                    <a href="#">タイトル4</a>
-                  </h4>
-                  <div class="ms-auto">
-                    <%= link_to "#", id: "button-edit-4" do %>
-                      <i class="bi bi-pencil-fill"></i>
-                    <% end %>
-                    <%= link_to "#", id: "button-delete-4", method: :delete, data: {confirm: ""} do %>
-                      <i class="bi bi-trash-fill"></i>
-                    <% end %>
-                  </div>
-                </div>
-                <ul class="list-inline">
-                  <li><i class="bi bi-person"></i> 橋本 愛子</li>
-                  <li><i class="bi bi-calendar"></i> 2019/12/26 17:00</li>
-                </ul>
-                <p class="card-text">本文4</p>
-              </div>
-            </div>
-          </div>
-      </div>
+        <%= render @boards %>
       </div>
     </div>
   </div>
+  <% else %>
+    <p><%= t('.no_result')%></p>
+  <% end %>
 </div>

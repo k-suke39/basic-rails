@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
     if @user
       flash[:success] = "#{t('header.login')}しました"
-      redirect_to root_path
+      redirect_to boards_path
     else
       flash[:danger] = "#{t('header.login')}に失敗しました"
       render :new, status: :unprocessable_entity

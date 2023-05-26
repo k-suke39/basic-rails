@@ -45,6 +45,7 @@ gem "dartsass-rails", "~> 0.4.0"
 gem 'sorcery', "0.16.3"
 gem 'rails-i18n', '~> 7.0.0'
 gem 'draper', '4.0.2'
+gem 'faker'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

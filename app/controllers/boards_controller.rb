@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
+  before_action :is_login?, only: %i[index]
   def index
-    user = User.find_by(id: current_user.id)
-    @boards = user.boards
+    @boards = Board.all.includes(:user).order(created_at: :desc)
   end
 end
