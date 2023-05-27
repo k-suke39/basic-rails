@@ -25,6 +25,26 @@ class BoardsController < ApplicationController
     end
   end
 
+  def edit
+    @board = current_user.boards.find(params[:id])
+  end
+
+  def update
+    @board = Board.find_by(id: params[:id])
+    if @board.update(board_params)
+      redirect_to boards_path, success: t('boards.edit.successful')
+    else
+      flash.now[:danger] = t('boards.edit.failure')
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @board = Board.find_by(id: params[:id])
+    @board.delete
+    redirect_to boards_path, success: t('boards.destroy.successful'), status: :see_other
+  end
+
   private
 
   def board_params

@@ -1,0 +1,26 @@
+<% content_for(:title, '掲示板編集| RUNTEQ BOARD APP') %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1><%= t('header.edit_board')%></h1>
+      <!-- ここからform_withを使う形に修正してください -->
+      <%= form_with model: @board, class: 'new_board' do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+        <div class="mb-3">
+          <%= f.label :title%>
+          <%= f.text_field :title, class: 'form-control'%>
+        </div>
+        <div class="mb-3">
+          <%= f.label :body%>
+          <%= f.text_area :body, class: 'form-control', style: 'height: 200px', row: '10'%>
+        </div>
+        <div class="mb-3">
+          <%= f.label :board_image %>
+          <%= f.file_field :board_image, class: 'form-control'%>
+        </div>
+        <%= f.submit '投稿', class: 'btn btn-primary'%>
+      <% end %>
+      <!-- ここまでform_withを使う形に修正してください -->
+    </div>
+  </div>
+</div>

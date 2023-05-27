@@ -23,6 +23,7 @@ ja:
     board: 掲示板
     board_index: 掲示板一覧
     create_board: 掲示板作成
+    edit_board: 掲示板編集
     bookmark_index: ブックマーク一覧
     profile: プロフィール
   time:
@@ -37,6 +38,11 @@ ja:
     create:
       successful: 掲示板を作成しました
       failure: 掲示板を作成出来ませんでした
+    edit:
+      successful: 掲示板を更新しました
+      failure: 掲示板を更新出来ませんでした
+    destroy:
+      successful: 掲示板を削除しました
   comments:
     create:
       successful: コメントを作成しました

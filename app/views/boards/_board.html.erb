@@ -10,11 +10,13 @@
                     <%= link_to board.title, board_path(board)%>
                   </h4>
                   <div class="ms-auto">
-                    <%= link_to "#", id: "button-edit-0" do %>
+                    <% if current_user.id == board.user_id%>
+                    <%= link_to edit_board_path(board), id: "button-edit-#{board.id}" do %>
                       <i class="bi bi-pencil-fill"></i>
                     <% end %>
-                    <%= link_to "#", id: "button-delete-0", method: :delete, data: {confirm: ""} do %>
+                    <%= link_to board_path(board), id: "button-delete-#{board.id}", data: { turbo_method: :delete, turbo_confirm: "削除しますか？"} do %>
                       <i class="bi bi-trash-fill"></i>
+                    <% end %>
                     <% end %>
                   </div>
                 </div>
@@ -26,5 +28,4 @@
               </div>
             </div>
            </div>
-          </div> 
- 
+          </div>

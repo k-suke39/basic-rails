@@ -20,13 +20,15 @@
               </ul>
               <div class='d-flex justify-content-end'>
                 <!-- ここからlink_toを使う形に修正してください -->
-                <%= link_to '#',id:"button-edit-25"  do%>
+                <% if current_user.id == @board.user_id%>
+                <%= link_to edit_board_path(@board), id: "button-edit-#{@board.id}"  do%>
                   <i class='bi bi-pencil-fill'></i>
                 <% end %>
                 <!-- ここまでlink_toを使う形に修正してください -->
                 <!-- ここからlink_toを使う形に修正してください -->
-                <%= link_to '#',id:"button-delete-25"  do%>
+                <%= link_to board_path(@board), id: "button-delete-#{@board.id}", data: { turbo_method: :delete, turbo_confirm: "削除しますか？"} do %>
                   <i class='bi bi-trash-fill'></i>
+                <% end %>
                 <% end %>
                 <!-- ここまでlink_toを使う形に修正してください -->
               </div>
