@@ -32,7 +32,7 @@ class BoardsController < ApplicationController
   def update
     @board = current_user.boards.find(params[:id])
     if @board.update(board_params)
-      redirect_to boards_path, success: t('boards.edit.successful')
+      redirect_to board_path(@board), success: t('boards.edit.successful')
     else
       flash.now[:danger] = t('boards.edit.failure')
       render :edit, status: :unprocessable_entity
