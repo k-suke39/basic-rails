@@ -1,13 +1,13 @@
 
         <div class="col-sm-12 col-lg-4 mb-3">
-          <div id="board-id-1">
+          <div id=<%= "board-id-#{board.id}"%>>
             <!-- image_tagを使う形に修正してください -->
             <div class="card"><%= image_tag board.board_image.url, class: 'card-img-top', width: '300', height: '200'%>
               <div class="card-body">
                 <div class="d-flex">
                   <h4 class="card-title">
                     <!-- link_toを使う形に修正してください -->
-                    <%= link_to board.title, '#'%>
+                    <%= link_to board.title, board_path(board)%>
                   </h4>
                   <div class="ms-auto">
                     <%= link_to "#", id: "button-edit-0" do %>

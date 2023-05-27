@@ -4,6 +4,12 @@ class BoardsController < ApplicationController
     @boards = Board.all.includes(:user).order(created_at: :desc)
   end
 
+  def show
+    @board = Board.find_by(id: params[:id])
+    @comment = Comment.new
+    @comments = @board.comments.order(created_at: :desc)
+  end
+
   def new
     @board = Board.new
   end
