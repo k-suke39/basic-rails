@@ -17,12 +17,19 @@
                     <%= link_to board_path(board), id: "button-delete-#{board.id}", data: { turbo_method: :delete, turbo_confirm: "削除しますか？"} do %>
                       <i class="bi bi-trash-fill"></i>
                     <% end %>
+                    <% else %>
+                    <div class='ms-auto'>
+                      <% if current_user.bookmark?(board) %>
+                        <%= render 'unbookmark', { board: board } %>
+                      <% else %>
+                        <%= render 'bookmark', { board: board } %>
+                      <% end %>
+                    </div>
                     <% end %>
                   </div>
                 </div>
                 <ul class="list-inline ms-auto">
                   <li><i class="bi bi-person"></i><%= board.user.decorate.full_name%></li>
-                  <%= render 'shared/bookmark_button', board: board%>
                   <li><i class="bi bi-calendar"></i><%= l(board.created_at, format: :long)%></li>
                 </ul>
                 <p class="card-text"><%= board.body%></p>

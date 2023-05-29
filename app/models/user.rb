@@ -11,4 +11,16 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :bookmarks, dependent: :destroy
   has_many :bookmarks_boards, through: :bookmarks, source: :board
+
+  def bookmark(board)
+    bookmarks_boards << board
+  end
+
+  def unbookmark(board)
+    bookmarks_boards.destroy(board)
+  end
+
+  def bookmark?(board)
+    bookmarks_boards.include?(board)
+  end
 end

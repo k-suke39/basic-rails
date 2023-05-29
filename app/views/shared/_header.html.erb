@@ -27,15 +27,12 @@
           <!-- link_toを使う形に修正してください -->
           <%= link_to 'ブックマーク一覧', bookmarks_boards_path, class: 'nav-link'%>
         </li>
-
         <li class='nav-item dropdown dropdown-slide'>
           <!-- link_toを使う形に修正してくださいdata属性、area属性の書き方は次の通りです。-->
           <!-- data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true' }, aria: { expanded: 'false' } -->
           <%= link_to '#', class: 'nav-link', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }, id: 'header-profile' do%>
-    
             <!-- image_tagを使う形に修正してください -->
             <%= image_tag 'sample.jpg', class: 'rounded-circle mr15', width: '40', height: '40'%>
-         
           <% end %>
           <div class='dropdown-menu dropdown-menu-end'>
             <div class='dropdown-item'><%= current_user.decorate.full_name %></div>
