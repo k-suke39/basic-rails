@@ -1,5 +1,5 @@
 
-<%= link_to board_bookmarks_path(board_id: board.id), id: "bookmark-button-for-board-#{board.id}", data: { turbo_method: :post, turbo_stream: true } do %>
+<%= link_to board_bookmarks_path(board_id: board.id), id: "bookmark-button-for-board-#{board.id}", data: { turbo_method: :post} do %>
   <i class="bi bi-star"></i>
 <% end %>
 

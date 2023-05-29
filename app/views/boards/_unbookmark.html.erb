@@ -1,4 +1,4 @@
 
-<%= link_to board_bookmarks_path(current_user.bookmarks.find_by(board_id: board.id)), id: "unbookmark-button-for-board-#{board.id}", data: { turbo_method: :delete, turbo_stream: true } do %>
+<%= link_to board_bookmarks_path(current_user.bookmarks.find_by(board_id: board.id)), id: "unbookmark-button-for-board-#{board.id}", data: { turbo_method: :delete} do %>
   <i class="bi bi-star-fill"></i>
 <% end %>

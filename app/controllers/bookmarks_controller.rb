@@ -8,6 +8,6 @@ class BookmarksController < ApplicationController
   def destroy
     @board = current_user.bookmarks.find(params[:board_id]).board
     @board.delete
-    redirect_to boards_path status: :see_other
+    redirect_to boards_path, status: :see_other
   end
 end
