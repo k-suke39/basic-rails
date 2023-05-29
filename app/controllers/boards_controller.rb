@@ -45,6 +45,10 @@ class BoardsController < ApplicationController
     redirect_to boards_path, success: t('boards.destroy.successful'), status: :see_other
   end
 
+  def bookmarks
+    @bookmarks = current_user.bookmarks_boards.all
+  end
+
   private
 
   def board_params

@@ -1,0 +1,9 @@
+<% if bookmark?(board) %> 
+  <%= link_to board_bookmarks_path(board), data: { "turbo-method": :delete } do %>
+    <i class="bi bi-star-fill"></i>
+  <% end %>
+<% else %>
+  <%= link_to board_bookmarks_path(board), data: { "turbo-method": :post } do %>
+    <i class="bi bi-star"></i>
+  <% end %>
+<% end %>

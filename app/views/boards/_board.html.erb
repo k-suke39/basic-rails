@@ -20,8 +20,9 @@
                     <% end %>
                   </div>
                 </div>
-                <ul class="list-inline">
+                <ul class="list-inline ms-auto">
                   <li><i class="bi bi-person"></i><%= board.user.decorate.full_name%></li>
+                  <%= render 'shared/bookmark_button', board: board%>
                   <li><i class="bi bi-calendar"></i><%= l(board.created_at, format: :long)%></li>
                 </ul>
                 <p class="card-text"><%= board.body%></p>

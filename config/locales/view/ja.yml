@@ -43,7 +43,14 @@ ja:
       failure: 掲示板を更新出来ませんでした
     destroy:
       successful: 掲示板を削除しました
+    bookmarks:
+      no_result: ブックマーク中の掲示板がありません
   comments:
     create:
       successful: コメントを作成しました
       failure: コメントを作成出来ませんでした
+  bookmarks:
+    create:
+      successful: ブックマークしました
+    destroy:
+      successful: ブックマークを外しました
