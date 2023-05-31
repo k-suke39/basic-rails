@@ -1,7 +1,8 @@
 class BoardsController < ApplicationController
   before_action :login?
   def index
-    @boards = Board.all.includes(:user).order(created_at: :desc).page(params[:page])
+    @q = Board.ransack(params[:q])
+    @boards = @q.result.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def show
@@ -46,7 +47,8 @@ class BoardsController < ApplicationController
   end
 
   def bookmarks
-    @bookmark_boards = current_user.bookmarks_boards.includes(:user).order(created_at: :desc).page(params[:page])
+    @q = current_user.bookmarks_boards.ransack(params[:q])
+    @bookmark_boards = @q.result.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
