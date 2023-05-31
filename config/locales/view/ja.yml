@@ -54,3 +54,5 @@ ja:
       successful: ブックマークしました
     destroy:
       successful: ブックマークを外しました
+  defaults:
+    delete_confirm: 削除しますか

@@ -23,4 +23,8 @@ class User < ApplicationRecord
   def bookmark?(board)
     bookmarks_boards.include?(board)
   end
+
+  def own?(object)
+    id == object&.user_id
+  end
 end

@@ -20,17 +20,14 @@
               </ul>
               <div class='d-flex justify-content-end'>
                 <!-- ここからlink_toを使う形に修正してください -->
-                <% if current_user.id == @board.user_id%>
+                <% if current_user.own?(@board)%>
                 <%= link_to edit_board_path(@board), id: "button-edit-#{@board.id}"  do%>
                   <i class='bi bi-pencil-fill'></i>
                 <% end %>
-                <!-- ここまでlink_toを使う形に修正してください -->
-                <!-- ここからlink_toを使う形に修正してください -->
                 <%= link_to board_path(@board), id: "button-delete-#{@board.id}", data: { turbo_method: :delete, turbo_confirm: "削除しますか？"} do %>
                   <i class='bi bi-trash-fill'></i>
                 <% end %>
                 <% end %>
-                <!-- ここまでlink_toを使う形に修正してください -->
               </div>
             </div>
           </div>
@@ -39,9 +36,14 @@
       </article>
     </div>
   </div>
-  <%= render 'shared/form'%>
-  <%= render 'shared/comment', comments: @comments%>
-  
-
-
+  <%= render 'shared/form', comment: @comment, board: @board%>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <table class="table">
+        <tbody id="table-comment">
+          <%= render @comments%>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
