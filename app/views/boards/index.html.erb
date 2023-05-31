@@ -19,7 +19,7 @@
       </div>
     </div>
   </div>
-  <%= paginate @boards %>
+  <%= paginate @boards,theme: 'bootstrap-5'%>
   <% else %>
     <p><%= t('.no_result')%></p>
   <% end %>
