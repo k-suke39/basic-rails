@@ -13,5 +13,7 @@ Rails.application.routes.draw do
     resource :bookmarks, only: %i[create destroy], shallow: true
   end
 
+  resource :profile
+
 
 end

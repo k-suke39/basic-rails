@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :bookmarks_boards, through: :bookmarks, source: :board
 
+  mount_uploader :avatar, AvatarUploader
+
   def bookmark(board)
     bookmarks_boards << board
   end

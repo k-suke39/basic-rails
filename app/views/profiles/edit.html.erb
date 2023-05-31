@@ -1,0 +1,29 @@
+<% content_for(:title, 'プロフィール編集| RUNTEQ BOARD APP') %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-auto">
+      <h1><%= t('header.edit_profile') %></h1>
+      <!-- ここからform_withを使う形に修正してください -->
+      <%=form_with model: @user, url: profile_path do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+        <div class="mb-3">
+          <%= f.label :email, class: 'form-label'%>
+          <%= f.text_field :email,  class: 'form-control'%>
+        </div>
+        <div class="mb-3">
+          <%= f.label :last_name, class: 'form-label'%>
+          <%= f.text_field :last_name,  class: 'form-control'%>
+        </div>
+        <div class="mb-3">
+          <%= f.label :first_name, class: 'form-label'%>
+          <%= f.text_field :first_name,  class: 'form-control'%>
+        </div>
+        <div class="mb-3">
+          <%= f.label :avatar, class: 'form-label'%>
+          <%= f.file_field :avatar,  class: 'form-control'%>
+        </div>
+        <%= f.submit '更新',  class: 'btn btn-primary'%>
+      <% end %>
+    </div>
+  </div>
+</div>

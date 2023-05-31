@@ -17,6 +17,9 @@ ja:
     new:
       title: ユーザー登録
       to_login_page: ログインページへ
+    edit:
+      successful: ユーザーを更新しました
+      failure: ユーザーを更新出来ませんでした
   header:
     login: ログイン
     logout: ログアウト
@@ -26,6 +29,7 @@ ja:
     edit_board: 掲示板編集
     bookmark_index: ブックマーク一覧
     profile: プロフィール
+    edit_profile: プロフィール編集
   time:
     am: 午前
     formats:
