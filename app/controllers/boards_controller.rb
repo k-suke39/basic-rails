@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
   before_action :login?
   def index
-    @boards = Board.all.includes(:user).order(created_at: :desc)
+    @boards = Board.all.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def show
