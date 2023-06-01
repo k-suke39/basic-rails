@@ -60,3 +60,9 @@ ja:
       successful: ブックマークを外しました
   defaults:
     delete_confirm: 削除しますか
+  password_resets:
+    create:
+      successful: パスワードリセット手順を送信しました
+    edit:
+      successful: パスワードを変更しました
+      failure: パスワードを変更しました
