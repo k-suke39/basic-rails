@@ -60,6 +60,7 @@ ja:
       successful: ブックマークを外しました
   defaults:
     delete_confirm: 削除しますか
+    password_reset: パスワードリセット
   password_resets:
     create:
       successful: パスワードリセット手順を送信しました
