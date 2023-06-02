@@ -67,3 +67,8 @@ ja:
     edit:
       successful: パスワードを変更しました
       failure: パスワードを変更しました
+  enums:
+    user:
+      role:
+        general: 一般
+        admin: 管理者

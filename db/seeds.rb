@@ -8,5 +8,4 @@
 
 100.times do |n|
   Board.create(title: Faker::Movies::HarryPotter.character, body: Faker::Movies::HarryPotter.quote, user_id: rand(1..6))
-  User.create(last_name: Faker::Name.last_name, first_name: Faker::Name.first_name, email: Faker::Internet.free_email, password: 12345, password_confirmation: 12345)
 end
