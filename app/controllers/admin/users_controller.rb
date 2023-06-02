@@ -1,5 +1,4 @@
 class Admin::UsersController < Admin::BaseController
-  skip_before_action :check_admin, only: %i[new create]
 
   def index
     @q = User.ransack(params[:q])
