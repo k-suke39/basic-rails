@@ -1,5 +1,4 @@
 class Admin::UsersController < Admin::BaseController
-
   def index
     @q = User.ransack(params[:q])
     @users = @q.result.all.order(created_at: :desc).page(params[:page])
