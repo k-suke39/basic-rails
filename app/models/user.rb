@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
+
   validates :last_name,               presence: true, length: { maximum: 255 }
   validates :first_name,              presence: true, length: { maximum: 255 }
   validates :email,                   presence: true, uniqueness: true
@@ -15,6 +16,8 @@ class User < ApplicationRecord
   has_many :bookmarks_boards, through: :bookmarks, source: :board
 
   mount_uploader :avatar, AvatarUploader
+
+  enum role: { general: 0, admin: 1 }
 
   def bookmark(board)
     bookmarks_boards << board
